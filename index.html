@@ -6,24 +6,24 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        *{
-            margin: 0 auto;
-        }
+        *{ margin: 0 auto; padding: 0;}
 
-        li{
-            list-style: none;
-        }
+        li{ list-style: none; }
 
-        .fl{
-            float: left;
-        }
+        a{ text-decoration: none; color:#000; }
 
-        .fr{
-            float: right;
+        .fl{ float: left; }
+
+        .fr{ float: right; }
+
+        .clearFixed:after{
+            content: " ";
+            display: block;
+            clear: both;
         }
 
         .main{
-            width: 1200px;
+            width: 1500px;
             margin: 0 auto；
         }
 
@@ -38,21 +38,130 @@
         }
 
         .header .h_top .topContent{
-            background-color: pink;
+            /* background-color: pink; */
+            background-color: #31373e;
             height: 45px;
             /* width: 1200px;
             margin: 0 auto; */
         }
 
-        .header .h_top .topContent .leftTxt1{
-            background-color: darkviolet;
-            width: 750px;
+        .header .h_top .topContent .contentLeft{
+            background-color: #31373e;
+            height: 45px;
+            /* width: 750px; */
+            /* float: left; */
+            line-height: 45px;
         }
 
-        /* .header .h_top .topContent .rightTxt1{
-            background-color: gold;
-            width: 380px;
-        } */
+        .header .h_top .topContent .contentLeft .leftTxt1{
+            height: 45px;
+        }
+
+        .header .h_top .topContent .contentLeft .leftTxt1 .logo{
+            font-size: 30px;
+            color: #01b088;
+            margin-right: 42px;
+        }
+
+        .header .h_top .topContent .contentLeft .leftTxt1 .city1{
+            font-size: 20px;
+            color: #01b088;
+            margin-right: 17px;
+        }
+
+        .header .h_top .topContent .contentLeft .leftTxt1 .city2{
+            font-size: 15px;
+            color: #aea99a;
+            margin-right: 44px;
+        }
+            
+        .header .h_top .topContent .contentLeft .ulList li{
+            float: left;
+            width: 87px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .header .h_top .topContent .contentLeft .ulList li a{
+            color: #c6f1ff;
+        }
+
+        .header .h_top .topContent .contentLeft .ulList li:first-child{
+            background-color: #23282c;
+        }
+
+        .header .h_top .topContent .contentRight{
+            background-color: #31373e;
+            height: 45px;
+            /* width: 400px; */
+            
+            /* float: right; */
+        }
+
+        .header .h_top .topContent .contentRight .ulList li{
+            /* background-color: red;; */
+            float: left;
+            line-height: 45px;
+            font-size: 17px;
+        }
+
+        .header .h_top .topContent .contentRight .ulList li a{
+            color: #c6f1ff;
+            /* background-color: gold; */
+            display: block;
+        }
+
+        .header .h_top .topContent .contentRight .ulList li .login{
+            /* padding-left: 33px; */
+            /* padding-top: 12px; */
+            /* padding-right: 11px; */
+        }
+
+        .header .h_top .topContent .contentRight .ulList li .login span{
+            display: block;
+            float: left;
+            width: 24px;
+            height: 24px;
+            background-repeat: no-repeat;
+            /* background-color: #01b088; */
+            background-image: url(img/sprite.png);
+            background-position: -10px -47px;
+            background-size: 74px 151px;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+
+        .header .h_top .topContent .contentRight .ulList li .register{
+            margin-right: 40px; 
+            /* 为什么用margin？ */
+        }
+
+        .header .h_top .topContent .contentRight .ulList li .register span{
+            padding: 0 12px;
+        }
+
+        .header .h_top .topContent .contentRight .ulList li .app{
+            margin-right: 25px;
+            color: #00c296;
+        }
+
+        .header .h_top .topContent .contentRight .ulList li .app span{
+            display: block;
+            float: left;
+            width: 24px;
+            height: 24px;
+            background-repeat: no-repeat;
+            /* background-color: #01b088; */
+            background-image: url(img/sprite.png);
+            background-position: -40px -47px;
+            background-size: 74px 151px;
+            margin-top: 10px;
+            margin-right: 5px;
+        }
+
+        .header .h_top .topContent .contentRight .ulList li:last-child{
+            margin-right: 8px;
+        }
 
         .header .h_bottom{
             background-color: #00b38a;
@@ -67,28 +176,33 @@
         }
     </style>
 </head>
-<body>
+<body> 
 
     <div id="box">
         <div class="header">
             <div class="h_top">
-                <div class="topContent main">
-                    <div class="leftTxt1 fl">
-                        <ul class="ulList1">
-                            <li class="logo fl">拉勾</li>
-                            <li class="city1 fl">北京站</li>
-                            <li class="city2 fl">[切换城市]</li>
-                        </ul>
-                        <ul class="ulList2">
-                            <li class="fl">首页</li>
-                            <li class="fl">公司</li>
-                            <li class="fl">校园招聘</li>
-                            <li class="fl">言职</li>
-                            <li class="fl">课程</li>
+                <div class="topContent main clearFixed">
+                    <div class="contentLeft fl">
+                        <div class="leftTxt1 fl">
+                            <a href="" class="logo">拉勾</a>
+                            <a href="" class="city1">北京站</a>
+                            <a href="" class="city2">[切换城市]</a>
+                        </div>
+                        <ul class="ulList clearFixed fl">
+                            <li><a href="#">首页</a></li>
+                            <li><a href="#">公司</a></li>
+                            <li><a href="#">校园招聘</a></li>
+                            <li><a href="#">言职</a></li>
+                            <li><a href="#">课程</a></li>
                         </ul>
                     </div>
-                    <div class="rightTxt1 fl">
-                        
+                    <div class="contentRight fr">
+                        <ul class="ulList clearFixed">
+                            <li><a href="" class="login"><span></span>登录</a></li>
+                            <li><a href="" class="register"><span>|</span>注册</a></li>
+                            <li><a href="" class="app"><span></span>拉勾APP</a></li>
+                            <li><a href="">进入企业版</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
