@@ -115,11 +115,6 @@
             display: block;
         }
 
-        .header .h_top .topContent .contentRight .ulList li .login{
-            /* padding-left: 33px; */
-            /* padding-top: 12px; */
-            /* padding-right: 11px; */
-        }
 
         .header .h_top .topContent .contentRight .ulList li .login span{
             display: block;
@@ -277,7 +272,7 @@
             width: 1172px;
             height: 55px;
             /* background-color:darkorange; */
-            margin-left: 171px;
+            margin-left: 105px;
         }
 
         .search .searchContent .searchBox .searchInp{
@@ -302,7 +297,7 @@
             width: 1172px;
             height: 27px;
             /* background-color:blue; */
-            margin-left: 171px;
+            margin-left: 105px;
             font-size: 19px;
             height: 46px;
             line-height: 46px;
@@ -323,21 +318,21 @@
         }
 
         .banner .bannerContent{
-            height: 580px;
-            background-color:pink;
+            /* height: 580px; */
+            /* background-color:pink; */
             padding-top: 59px;
         }
 
         .banner .bannerContent .leftBox{
             width: 382px;
-            height: 580px;
-            background-color: aquamarine;
+            /* height: 580px; */
+            /* background-color: aquamarine; */
         }
 
         .banner .bannerContent .leftBox .bannerList {
             text-align: center;
             line-height: 23px;
-            background-color: red;
+            /* background-color: red; */
         }
 
         .banner .bannerContent .leftBox .bannerList li a{
@@ -347,7 +342,7 @@
         }
 
         .banner .bannerContent .leftBox .bannerList li{
-            padding-bottom: 40px;
+            padding-bottom: 38px;
         }
 
         .banner .bannerContent .leftBox .bannerList li:first-child{
@@ -356,17 +351,97 @@
             color: #333d46;
         }
 
+        .banner .bannerContent .leftBox .bannerList span{
+            font-family: "宋体";
+        }
+
         .banner .bannerContent .rightBox{
             width: 949px;
-            height: 580px;
-            background-color: yellowgreen;
+            /* height: 430px; */
+            /* background-color: yellowgreen; */
+            position: relative;
         }
+
+        .banner .bannerContent .rightBox .imgBox{
+            width: 949px;
+            height: 430px;
+        }
+        
+        .banner .bannerContent .rightBox .imgBox img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .banner .bannerContent .rightBox span{
+            font-family: "宋体";
+            /* background-color: blue; */
+            font-size: 30px;
+            position: absolute;
+            top: 50%;
+            margin-top: -15px;
+            display: none; 
+        }
+
+        .banner .bannerContent .rightBox:hover span{
+            display: block;
+        }
+
+
+        .banner .bannerContent .rightBox .lt{
+            /* padding-left: 10px; */
+            /* float: left; */
+            left: 10px;  
+            
+        }
+
+        .banner .bannerContent .rightBox .rt{
+            /* padding-right: 10px; */
+            /* float: right; */
+            right: 10px;
+        }
+
+        .content .topSelection{
+            height: 143px;
+            background-color: brown;
+        }
+
+        .content .topSelection .top1{
+            height: 61px;
+            /* background-color: cornflowerblue; */
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .content .topSelection .top1 .tList1{
+            line-height: 61px;
+        }
+        
+        .content .topSelection .top1 .tList1 .hotBtn .aHotBtn{
+            border-bottom: 2px solid #333333;
+            padding-bottom: 17px;
+            font-size: 19px;
+            color: #333333;
+            margin-right: 75px;
+        }
+
+        .content .topSelection .top1 .tList1 .newBtn .aNewBtn{
+            font-size: 19px;
+            color: #999999;
+        }
+
+
+        .content .topSelection .top2{
+            height: 81px;
+            background-color: chartreuse;
+        }
+
+        
+
+
 
 
     </style>
 </head>
-<body style="height: 90000px"> 
-
+<body style="height:90000px"> 
     <div id="box">
         <div class="header">
             <div class="h_top">
@@ -435,7 +510,7 @@
         </div>
 
         <div class="banner">
-            <div class="bannerContent main">
+            <div class="bannerContent main clearFixed">
                 <div class="leftBox fl">
                     <ul class="bannerList clearFixed">
                         <li class="fl">技术</li>
@@ -495,12 +570,28 @@
                         <span class="fr">&gt;</span>
                     </ul>
                 </div>
-                <div class="rightBox fr"></div>
+                <div class="rightBox fr">
+                    <div class="imgBox">
+                        <img src="img/banner.JPG" alt="">
+                    </div>
+                    <span class="lt">&lt;</span>
+                    <span class="rt">&gt;</span>
+                </div>
 
             </div>
         </div>
 
-        <div class="content">
+        <div class="content main">
+            <div class="topSelection">
+                <div class="top1">
+                    <ul class="tList1 clearFixed">
+                        <li class="hotBtn fl"><a href="" class="aHotBtn">24Hour热门</a></li>
+                        <li class="newBtn fl"><a href="" class="aNewBtn">最新职位</a></li>
+                    </ul>
+                </div>
+                <div class="top2"></div>
+            </div>
+            <div class="topColumn"></div>
 
         </div>
 
