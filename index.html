@@ -7,18 +7,16 @@
     <link rel="stylesheet" href="style.css">
     <style>
         *{ margin: 0 auto; padding: 0;}
-
         li{ list-style: none; }
-
         a{ text-decoration: none; color:#000; }
-
         img{ display: block; }
-
         input{ border: none; }
 
         .fl{ float: left; }
 
         .fr{ float: right; }
+
+        .clear{ clear: both; }
 
         .clearFixed:after{
             content: " ";
@@ -400,22 +398,22 @@
             right: 10px;
         }
 
-        .content .topSelection{
-            height: 143px;
+        .content .line1{
+            /* height: 143px; */
             /* background-color: brown; */
         }
 
-        .content .topSelection .top1{
+        .content .lineTop .top1{
             height: 61px;
             /* background-color: cornflowerblue; */
             border-bottom: 1px solid #e8e8e8;
         }
 
-        .content .topSelection .top1 .tList1{
+        .content .lineTop .top1 .tList1{
             line-height: 61px;
         }
         
-        .content .topSelection .top1 .tList1 .hotBtn .aHotBtn{
+        .content .lineTop .top1 .tList1 .hotBtn .aHotBtn{
             border-bottom: 2px solid #333333;
             padding-bottom: 17px;
             font-size: 19px;
@@ -423,22 +421,22 @@
             margin-right: 75px;
         }
 
-        .content .topSelection .top1 .tList1 .newBtn .aNewBtn{
+        .content .lineTop .top1 .tList1 .newBtn .aNewBtn{
             font-size: 19px;
             color: #999999;
         }
 
         /* 内容部分第二part */
-        .content .topSelection .top2{
+        .content .lineTop .top2{
             height: 81px;
             /* background-color: chartreuse; */
         }
 
-        .content .topSelection .top2 .tList2{
+        .content .lineTop .top2 .tList2{
             padding-top: 38px;
         }
 
-        .content .topSelection .top2 .tList2 li:nth-of-type(1) a{
+        .content .lineTop .top2 .tList2 li:nth-of-type(1) a{
             background-color: #e6e6e6;
             color: #fffffb;
             width: 22px;
@@ -449,22 +447,112 @@
             margin-right: 18px;
         }
 
-        .content .topSelection .top2 .tList2 li:nth-of-type(2) a{
+        .content .lineTop .top2 .tList2 li:nth-of-type(2) a{
             font-size: 18px;
             color: #a699a6;
             margin-right: 27px;
         }
 
-        .content .topSelection .top2 .tList2 li:nth-of-type(3) a{
+        .content .lineTop .top2 .tList2 li:nth-of-type(3) a{
             font-size: 18px;
             color: #00b38a;
         }
 
+        .content .line1 .conUl{
+            /* background-color: red; */
+            /* height: 300px; */
+        }
 
+        .content .line1 .conUl li .conBox{
+            width: 400px;
+            /* height: 190px; */
+            border: 1px solid #eaeeed;
+            /* background-color: #4ecbe0; */
+            padding: 30px 23px;
+            /* margin-right: 18px; */
+        }
+
+        .content .line1 .conUl li .conBox .firstPara .job{
+            font-size: 17px;
+            color: #333333;
+            margin-right: 17px;
+        }
+
+        .content .line1 .conUl li .conBox .firstPara .time{
+            font-size: 17px;
+            color: #b39999;
+            margin-right: 10px;
+        }
+
+        .content .line1 .conUl li .conBox .firstPara .sImg{
+            text-align: center;
+            padding-top: 4px;
+        }
+
+        .content .line1 .conUl li .conBox .firstPara .salary{
+            font-size: 17px;
+            color: #ff5d48;
+            margin-left: 84px;
+        }
+
+        .content .line1 .conUl li .conBox .request{
+            margin-top: 23px;
+            margin-bottom: 23px;
+            color: #8d7777;
+        }
+
+        .content .line1 .conUl li .conBox .dotLine{
+            border-bottom: 1px dashed #999999;
+            padding-bottom: 25px;
+        }
+
+        .content .line1 .conUl li .conBox .dotLine .jobButton{
+            width: 60px;
+            height: 13px;
+            padding: 11px 16px;
+            border: 1px solid #f0f0f0;
+            border-radius: 5%;
+            color: #999999;
+            font-size: 13px;
+            text-align: center;
+            line-height: 13px;
+        }
+
+        .content .line1 .conUl li .conBox .imgBox{
+            /* width: 237px;
+            height: 43px; */
+            padding-top: 27px;
+            /* background-color: gold; */
+        }
+
+        .content .line1 .conUl li .conBox .imgBox img{
+            width: 43px;
+            height: 43px;
+            /* padding-left:-20px; */
+            margin-right: 20px;
+        }
+
+        .content .line1 .conUl li .conBox .imgBox .cName{
+            font-size: 17px;
+            color: #55557b;
+            padding-bottom: 5px;
+        }
+
+        .content .line1 .conUl li .conBox .imgBox .cInfo{
+            font-size: 16px;
+            color: #999999;
+        }
+
+        .content .line1 .conUl li .middle-box{
+            margin-left: 27px;
+            margin-right: 27px;
+        }
+
+        .content .line1 .conUl li{
+            margin-bottom: 20px;
+        }
 
         
-
-
 
 
     </style>
@@ -610,36 +698,244 @@
         </div>
 
         <div class="content main">
-            <div class="topSelection">
-                <div class="top1">
-                    <ul class="tList1 clearFixed">
-                        <li class="hotBtn fl"><a href="" class="aHotBtn">24Hour热门</a></li>
-                        <li class="newBtn fl"><a href="" class="aNewBtn">最新职位</a></li>
-                    </ul>
+            <div class="line1">
+                <div class="lineTop">
+                    <div class="top1">
+                        <ul class="tList1 clearFixed">
+                            <li class="hotBtn fl"><a href="" class="aHotBtn">24Hour热门</a></li>
+                            <li class="newBtn fl"><a href="" class="aNewBtn">最新职位</a></li>
+                        </ul>
+                    </div>
+                    <div class="top2">
+                        <ul class="tList2 clearFixed">
+                            <li><a href="" class="fl">?</a></li>
+                            <li><a href="" class="fl">过去24小时，最多人看过的岗位在这里</a></li>
+                            <li><a href="" class="fl">我知道了</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="top2">
-                    <ul class="tList2 clearFixed">
-                        <li><a href="" class="fl">?</a></li>
-                        <li><a href="" class="fl">过去24小时，最多人看过的岗位在这里</a></li>
-                        <li><a href="" class="fl">我知道了</a></li>
-                    </ul>
-                </div>
+                <ul class="conUl">
+                    <!-- 第一行 -->
+                    <li class="clearFixed">
+                        <!-- 第一个组块 -->
+                        <div class="conBox fl">
+                            <p class="firstPara clearFixed">
+                                <span class="job fl">用户运营</span>
+                                <span class="time fl">[10:15发布]</span>
+                                <span class="sImg fl"><img src="img/icon_chat.png" alt=""></span>
+                                <span class="salary fl">15k-25k</span>
+                            </p>
+                            <p class="request">经验3-5年 / 本科</p>
+                            <p class="dotLine clearFixed">
+                                <span class="jobButton fl">用户运营</span>
+                            </p>
+                            <!-- 虚线以下 -->
+                            <div class="imgBox clearFixed">
+                                <img src="img/con1.png" alt="" class="fl">
+                                <div class="imgTxt">
+                                    <p class="cName">核桃编程</p>
+                                    <p class="cInfo">教育 / B轮 / 北京</p>
+                                </div>  
+                            </div>
+                        </div>
+                        <!-- 第二个组块 -->
+                        <div class="conBox middle-box fl">
+                            <p class="firstPara clearFixed">
+                                <span class="job fl">用户运营</span>
+                                <span class="time fl">[10:15发布]</span>
+                                <span class="sImg fl"><img src="img/icon_chat.png" alt=""></span>
+                                <span class="salary fl">15k-25k</span>
+                            </p>
+                            <p class="request">经验3-5年 / 本科</p>
+                            <p class="dotLine clearFixed">
+                                <span class="jobButton fl">用户运营</span>
+                            </p>
+                            <!-- 虚线以下 -->
+                            <div class="imgBox clearFixed">
+                                <img src="img/con1.png" alt="" class="fl">
+                                <div class="imgTxt">
+                                    <p class="cName">核桃编程</p>
+                                    <p class="cInfo">教育 / B轮 / 北京</p>
+                                </div>  
+                            </div>
+                        </div>
+                        <!-- 第三个组块 -->
+                        <div class="conBox fl">
+                            <p class="firstPara clearFixed">
+                                <span class="job fl">用户运营</span>
+                                <span class="time fl">[10:15发布]</span>
+                                <span class="sImg fl"><img src="img/icon_chat.png" alt=""></span>
+                                <span class="salary fl">15k-25k</span>
+                            </p>
+                            <p class="request">经验3-5年 / 本科</p>
+                            <p class="dotLine clearFixed">
+                                <span class="jobButton fl">用户运营</span>
+                            </p>
+                            <!-- 虚线以下 -->
+                            <div class="imgBox clearFixed">
+                                <img src="img/con1.png" alt="" class="fl">
+                                <div class="imgTxt">
+                                    <p class="cName">核桃编程</p>
+                                    <p class="cInfo">教育 / B轮 / 北京</p>
+                                </div>  
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 第二行 -->
+                    <li class="clearFixed">
+                        <!-- 第一个组块 -->
+                        <div class="conBox fl">
+                            <p class="firstPara clearFixed">
+                                <span class="job fl">用户运营</span>
+                                <span class="time fl">[10:15发布]</span>
+                                <span class="sImg fl"><img src="img/icon_chat.png" alt=""></span>
+                                <span class="salary fl">15k-25k</span>
+                            </p>
+                            <p class="request">经验3-5年 / 本科</p>
+                            <p class="dotLine clearFixed">
+                                <span class="jobButton fl">用户运营</span>
+                            </p>
+                            <!-- 虚线以下 -->
+                            <div class="imgBox clearFixed">
+                                <img src="img/con1.png" alt="" class="fl">
+                                <div class="imgTxt">
+                                    <p class="cName">核桃编程</p>
+                                    <p class="cInfo">教育 / B轮 / 北京</p>
+                                </div>  
+                            </div>
+                        </div>
+                        <!-- 第二个组块 -->
+                        <div class="conBox middle-box fl">
+                            <p class="firstPara clearFixed">
+                                <span class="job fl">用户运营</span>
+                                <span class="time fl">[10:15发布]</span>
+                                <span class="sImg fl"><img src="img/icon_chat.png" alt=""></span>
+                                <span class="salary fl">15k-25k</span>
+                            </p>
+                            <p class="request">经验3-5年 / 本科</p>
+                            <p class="dotLine clearFixed">
+                                <span class="jobButton fl">用户运营</span>
+                            </p>
+                            <!-- 虚线以下 -->
+                            <div class="imgBox clearFixed">
+                                <img src="img/con1.png" alt="" class="fl">
+                                <div class="imgTxt">
+                                    <p class="cName">核桃编程</p>
+                                    <p class="cInfo">教育 / B轮 / 北京</p>
+                                </div>  
+                            </div>
+                        </div>
+                        <!-- 第三个组块 -->
+                        <div class="conBox fl">
+                            <p class="firstPara clearFixed">
+                                <span class="job fl">用户运营</span>
+                                <span class="time fl">[10:15发布]</span>
+                                <span class="sImg fl"><img src="img/icon_chat.png" alt=""></span>
+                                <span class="salary fl">15k-25k</span>
+                            </p>
+                            <p class="request">经验3-5年 / 本科</p>
+                            <p class="dotLine clearFixed">
+                                <span class="jobButton fl">用户运营</span>
+                            </p>
+                            <!-- 虚线以下 -->
+                            <div class="imgBox clearFixed">
+                                <img src="img/con1.png" alt="" class="fl">
+                                <div class="imgTxt">
+                                    <p class="cName">核桃编程</p>
+                                    <p class="cInfo">教育 / B轮 / 北京</p>
+                                </div>  
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 第三行 -->
+                    <li class="clearFixed">
+                        <!-- 第一个组块 -->
+                        <div class="conBox fl">
+                            <p class="firstPara clearFixed">
+                                <span class="job fl">用户运营</span>
+                                <span class="time fl">[10:15发布]</span>
+                                <span class="sImg fl"><img src="img/icon_chat.png" alt=""></span>
+                                <span class="salary fl">15k-25k</span>
+                            </p>
+                            <p class="request">经验3-5年 / 本科</p>
+                            <p class="dotLine clearFixed">
+                                <span class="jobButton fl">用户运营</span>
+                            </p>
+                            <!-- 虚线以下 -->
+                            <div class="imgBox clearFixed">
+                                <img src="img/con1.png" alt="" class="fl">
+                                <div class="imgTxt">
+                                    <p class="cName">核桃编程</p>
+                                    <p class="cInfo">教育 / B轮 / 北京</p>
+                                </div>  
+                            </div>
+                        </div>
+                        <!-- 第二个组块 -->
+                        <div class="conBox middle-box fl">
+                            <p class="firstPara clearFixed">
+                                <span class="job fl">用户运营</span>
+                                <span class="time fl">[10:15发布]</span>
+                                <span class="sImg fl"><img src="img/icon_chat.png" alt=""></span>
+                                <span class="salary fl">15k-25k</span>
+                            </p>
+                            <p class="request">经验3-5年 / 本科</p>
+                            <p class="dotLine clearFixed">
+                                <span class="jobButton fl">用户运营</span>
+                            </p>
+                            <!-- 虚线以下 -->
+                            <div class="imgBox clearFixed">
+                                <img src="img/con1.png" alt="" class="fl">
+                                <div class="imgTxt">
+                                    <p class="cName">核桃编程</p>
+                                    <p class="cInfo">教育 / B轮 / 北京</p>
+                                </div>  
+                            </div>
+                        </div>
+                        <!-- 第三个组块 -->
+                        <div class="conBox fl">
+                            <p class="firstPara clearFixed">
+                                <span class="job fl">用户运营</span>
+                                <span class="time fl">[10:15发布]</span>
+                                <span class="sImg fl"><img src="img/icon_chat.png" alt=""></span>
+                                <span class="salary fl">15k-25k</span>
+                            </p>
+                            <p class="request">经验3-5年 / 本科</p>
+                            <p class="dotLine clearFixed">
+                                <span class="jobButton fl">用户运营</span>
+                            </p>
+                            <!-- 虚线以下 -->
+                            <div class="imgBox clearFixed">
+                                <img src="img/con1.png" alt="" class="fl">
+                                <div class="imgTxt">
+                                    <p class="cName">核桃编程</p>
+                                    <p class="cInfo">教育 / B轮 / 北京</p>
+                                </div>  
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+                <div class="clear"></div>        
             </div>
-            <div class="topColumn"></div>
-            <div class="topSelection inherit-bottomSelection">
-                <div class="top1">
-                    <ul class="tList1 clearFixed">
-                        <li class="hotBtn fl"><a href="" class="aHotBtn">互联网公司热门榜</a></li>
-                        <li class="newBtn fl"><a href="" class="aNewBtn">最新职位</a></li>
-                    </ul>
-                </div>
-                <div class="top2">
-                    <ul class="tList2 clearFixed">
-                        <li><a href="" class="fl">?</a></li>
-                        <li><a href="" class="fl">过去24小时，最多人看过的岗位在这里</a></li>
-                        <li><a href="" class="fl">我知道了</a></li>
-                    </ul>
-                </div>
+            
+            <div class="line2">
+                <div class="lineTop">
+                    <div class="top1">
+                        <ul class="tList1 clearFixed">
+                            <li class="hotBtn fl"><a href="" class="aHotBtn">互联网公司热门榜</a></li>
+                            <li class="newBtn fl"><a href="" class="aNewBtn">最新职位</a></li>
+                        </ul>
+                    </div>
+                    <div class="top2">
+                        <ul class="tList2 clearFixed">
+                            <li><a href="" class="fl">?</a></li>
+                            <li><a href="" class="fl">过去24小时，最多人看过的岗位在这里</a></li>
+                            <li><a href="" class="fl">我知道了</a></li>
+                        </ul>
+                    </div>
+                </div>  
             </div>
 
         </div>
