@@ -29,8 +29,8 @@
             display: block;
             position: absolute;
             left: 50%;
-            bottom: 313px;
-            margin-left: -217px;
+            bottom: 0px;
+            margin-left: -10px;
             border: 10px solid transparent;
             border-bottom-color: #00b38a;
         }
@@ -40,8 +40,8 @@
             display: block;
             position: absolute;
             left: 50%;
-            bottom: 312px;
-            margin-left: -217px;
+            bottom: -2px;
+            margin-left: -10px;
             border: 10px solid transparent;
             border-bottom-color: #fff;
         }
@@ -52,7 +52,6 @@
         }
 
         .box{
-            background-color: #4e00b3;
             width: 700px;
             height: 490px;
             position: absolute;
@@ -63,14 +62,14 @@
 
         .box .logo{
             height: 77px;
-            background: coral url("img2/logo.png") no-repeat;
+            background:  url("img2/logo.png") no-repeat;
         }
 
         .box .forBox{
-            background-color: cyan;
             height: 413px;
             border: 1px solid #dbe1e6;
             padding: 6px;
+            background-color: #fff;
         }
 
         .box .forBox .imgBox img{
@@ -82,35 +81,105 @@
         }
 
         .box .forBox .inpuLeft{
-            background-color: red;
-            width: 290px;
+            width: 289px;
             height: 277px;
             padding: 0px 63px;
+            border-right: 1px dashed #555;
+            position: relative;
         }
 
-        .box .forBox .inpuRight{
-            background-color: yellow;
-            width: 270px;
-            height: 277px;
+        .box .forBox .inpuLeft .or{
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            right: -8px;
+            top: 50%;
+            margin-top: -9px;
+            background-color: #fff;
+            text-align: center;
+            color: #555;
         }
 
         .box .forBox .inpuLeft .line1{
             height: 40px;
             border-bottom: 1px solid #555;
-            font-size: 18px;
+            font-size: 16px;
             color: #555;
             line-height: 40px;
         }
 
         .box .forBox .inpuLeft .line1 p{
-            width: 145px;
+            width: 143px;
             text-align: center;
+            position: relative;
         }
 
         .box .forBox .inpuLeft .line1 p:nth-child(1){
             color: #00b38a;
-
+            border-bottom:1px solid #00b38a;
         }
+
+        .box .forBox .inpuLeft .lineInp{
+            height: 64px;
+            border-bottom: 1px solid #555;
+        }
+
+        .box .forBox .inpuLeft .lineInp input{
+            width: 100%;
+            height: 44px;
+            padding-top: 20px;
+        }
+
+        .box .forBox .inpuLeft .forgetPassword{
+            font-size: 12px;
+            color: #00b38a;
+            height: 58px;
+            line-height: 58px;
+            text-align: right;
+        }
+
+        .box .forBox .inpuLeft input[type="submit"]{
+            height: 48px;
+            background-color: #00b38a;
+            color: #fff;
+            text-align: center;
+            line-height: 48px;
+            width: 100%;
+            font-size: 18px;
+            letter-spacing: 5px;
+        }
+        
+        .box .forBox .inpuRight{
+            /* width: 270px; */
+            /* height: 277px; */
+            padding-left: 52px;
+            font-size: 14px;
+            color: #555;
+            padding-top: 80px;
+        }
+
+        .box .forBox .inpuRight .registerNow{
+            font-size: 16px;
+            color: #00b38a;
+            margin-bottom: 43px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .box .forBox .inpuRight .registerNow img{
+            display: inline-block;
+            margin-left: 3px;
+            vertical-align: middle;
+            /* padding-bottom: 1px; */
+        }
+
+        .box .forBox .inpuRight .loginNow img{
+            margin-right: 24px;
+            margin-top: 10px;
+        }
+
+
+
 
 
 
@@ -132,8 +201,27 @@
                         <p class="fl btnWhite btnRed">密码登录</p>
                         <p class="fl">验证码登录</p>
                     </div>
+                    <div class="lineInp">
+                        <input type="text" placeholder="请输入用户名或邮箱">
+                    </div>
+                    <div class="lineInp">
+                        <input type="text" placeholder="请输入密码">
+                    </div>
+                    <p class="forgetPassword">忘记密码？</p>
+                    <input type="submit" value="登录">
+                    <span class="or">or</span>
                 </div>
-                <div class="inpuRight fl"></div>
+                <div class="inpuRight fl">
+                    <div class="txt1">还没有账号：</div>
+                    <div class="registerNow">立即注册<img src="img2/icon-arrow-right.png" alt=""></div>
+                    <div class="loginNow clearFixed">
+                        <p>使用以下账号直接登录</p>
+                        <img src="img2/icon-sina1.png" alt="" class="fl">
+                        <img src="img2/icon-wechat.png" alt="" class="fl">
+                        <img src="img2/icon-tencent.png" alt="" class="fl">
+                        <img src="img2/icon-baidu.png" alt="" class="fl">
+                    </div>
+                </div>
             </div>
         </form>
     </div>
