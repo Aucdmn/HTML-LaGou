@@ -5,29 +5,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>登录</title>
     <style>
-        *{margin: 0; padding: 0;}
+        *{ margin: 0 auto; padding: 0;}
+        li{ list-style: none; }
+        a{ text-decoration: none; color:#000; }
+        img{ display: block; }
+        input{ border: none; }
+
+        .fl{ float: left; }
+        .fr{ float: right; }
+        .clear{ clear: both; }
+        .clearFixed:after{
+            content: " ";
+            display: block;
+            clear: both;
+        }
+
+        body{
+            background-color: #f8f9fc;
+        }
+
+        .btnRed:before{
+            content: "";
+            display: block;
+            position: absolute;
+            left: 50%;
+            bottom: 313px;
+            margin-left: -217px;
+            border: 10px solid transparent;
+            border-bottom-color: #00b38a;
+        }
+
+        .btnWhite:after{
+            content: "";
+            display: block;
+            position: absolute;
+            left: 50%;
+            bottom: 312px;
+            margin-left: -217px;
+            border: 10px solid transparent;
+            border-bottom-color: #fff;
+        }
 
         .upper{
             background-color: #00b38a;
-            height: 450px;
+            height: 360px;
         }
 
         .box{
             background-color: #4e00b3;
-            width: 701px;
-            height: 406px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            width: 700px;
+            height: 490px;
+            position: absolute;
+            left: 50%;
+            margin-left: -325px;
+            top: 77px;
         }
+
+        .box .logo{
+            height: 77px;
+            background: coral url("img2/logo.png") no-repeat;
+        }
+
+        .box .forBox{
+            background-color: cyan;
+            height: 413px;
+            border: 1px solid #dbe1e6;
+            padding: 6px;
+        }
+
+        .box .forBox .imgBox img{
+            margin-right: 6px;
+        }
+
+        .box .forBox .imgBox img:nth-child(2){
+            margin-top: -5px;
+        }
+
+        .box .forBox .inpuLeft{
+            background-color: red;
+            width: 290px;
+            height: 277px;
+            padding: 0px 63px;
+        }
+
+        .box .forBox .inpuRight{
+            background-color: yellow;
+            width: 270px;
+            height: 277px;
+        }
+
+        .box .forBox .inpuLeft .line1{
+            height: 40px;
+            border-bottom: 1px solid #555;
+            font-size: 18px;
+            color: #555;
+            line-height: 40px;
+        }
+
+        .box .forBox .inpuLeft .line1 p{
+            width: 145px;
+            text-align: center;
+        }
+
+        .box .forBox .inpuLeft .line1 p:nth-child(1){
+            color: #00b38a;
+
+        }
+
+
+
+
     </style>
 </head>
 <body>
-    <div class="upper">
-
-    </div>
+    <div class="upper"></div>
     <div class="box">
-
+        <div class="logo"></div>
+        <form action="#" method="get">
+            <div class="forBox clearFixed">
+                <div class="imgBox clearFixed">
+                    <img class="fl" src="img2/qrcode-normal.svg" alt="">
+                    <img class="fl" src="img2/wx-login.svg" alt="">
+                </div>
+                <div class="inpuLeft fl">
+                    <div class="line1">
+                        <p class="fl btnWhite btnRed">密码登录</p>
+                        <p class="fl">验证码登录</p>
+                    </div>
+                </div>
+                <div class="inpuRight fl"></div>
+            </div>
+        </form>
     </div>
     
 </body>
